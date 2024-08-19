@@ -1,0 +1,3 @@
+package org.feeshop.shopfee.presentation.base
+
+interface BaseInteractionListener
