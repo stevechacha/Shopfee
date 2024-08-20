@@ -5,6 +5,8 @@ android-minSdk = "24"
 android-targetSdk = "34"
 coreSplashscreenVersion = "1.0.1"
 androidx-activityCompose = "1.9.1"
+firebaseBom = "33.1.2"
+firebaseFirestore = "1.8.1"
 navigationCompose = "2.7.0-alpha07"
 androidx-appcompat = "1.7.0"
 androidx-constraintlayout = "2.1.4"
@@ -15,6 +17,7 @@ androidx-lifecycle = "2.8.0"
 androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
 compose-plugin = "1.6.11"
+calf = "0.2.0"
 coil = "3.0.0-alpha08"
 datastore = "1.1.1"
 image-loader = "1.2.8"
@@ -34,8 +37,14 @@ ksp = "1.9.23-1.0.20"
 logback = "1.5.6"
 moko-geo-version = "0.6.0"
 moko-biometry-version = "0.4.0"
+paging-compose-version="3.3.0-alpha02-0.4.0"
 serialization_version = "1.6.3"
 material3Android = "1.2.1"
+firebase-massage = "23.3.1"
+firebase-common = "20.4.2"
+google-services-version = "4.4.2"
+google-gson-version = "2.10.1"
+
 
 
 [libraries]
@@ -52,7 +61,11 @@ androidx-activity-compose = { module = "androidx.activity:activity-compose", ver
 androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 androidx-navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+calf = { module = "com.mohamedrejeb.calf:calf-ui", version.ref = "calf" }
 compose-materialIcons = { module = "org.jetbrains.compose.material:material-icons-extended", version.ref = "compose-plugin" }
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-plugin" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-plugin" }
+compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose-plugin" }
 coil = { module = "io.coil-kt.coil3:coil", version.ref = "coil" }
 coil-network-ktor = { module = "io.coil-kt.coil3:coil-network-ktor", version.ref = "coil" }
 coil_compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
@@ -60,6 +73,12 @@ compose-image-loader = { module = "io.github.qdsfdhvh:image-loader", version.ref
 coil_compose_core = { module = "io.coil-kt.coil3:coil-compose-core", version.ref = "coil" }
 datastore = { module = "androidx.datastore:datastore", version.ref = "datastore" }
 datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+firebase-firestore = { module = "dev.gitlive:firebase-firestore", version.ref = "firebaseFirestore" }
+firebase-messaging-ktx = { group = "com.google.firebase", name = "firebase-messaging-ktx", version = "23.3.1" }
+firebase-common-ktx = { group = "com.google.firebase", name = "firebase-common-ktx", version = "20.4.2" }
+firebase-bom-ktx = { group = "com.google.firebase", name = "firebase-bom", version = "32.4.1" }
+google-code-gson = { module = "com.google.code.gson:gson", version.ref = "google-gson-version" }
+
 kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin-version" }
@@ -97,6 +116,10 @@ moko-geo = { module = "dev.icerock.moko:geo", version.ref = "moko-geo-version"}
 moko-geo-compose = { module = "dev.icerock.moko:geo-compose", version.ref = "moko-geo-version"}
 moko-biometry = { module = "dev.icerock.moko:biometry", version.ref = "moko-biometry-version"}
 moko-biometry-compose = { module = "dev.icerock.moko:biometry-compose", version.ref = "moko-biometry-version"}
+
+paging-compose= { module = "app.cash.paging:paging-compose-common", version.ref = "paging-compose-version" }
+paging-common= { module = "app.cash.paging:paging-common", version.ref = "paging-compose-version" }
+
 realm-library-base = { module = "io.realm.kotlin:library-base", version.ref = "realm-version" }
 androidx-material3-android = { group = "androidx.compose.material3", name = "material3-android", version.ref = "material3Android" }
 
@@ -115,3 +138,4 @@ kotlinKsp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinx-serialization-version" }
 realm = { id = "io.realm.kotlin", version.ref = "realm-version" }
+google-services = { id = "com.google.gms.google-services",  version.ref = "google-services-version" }

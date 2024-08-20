@@ -46,7 +46,7 @@ fun AppNavigation(
         }
 
         composable(Screens.ConfirmRegisterCode.route){
-            ConfirmVerificationCodeScreen()
+            ConfirmVerificationCodeScreen(navController)
         }
 
         composable(Screens.Login.route){

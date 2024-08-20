@@ -9,6 +9,10 @@ plugins {
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlinx.serialization)
     alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.google.services)
+    alias(libs.plugins.kotlinKsp)
+
+
 }
 
 kotlin {
@@ -64,9 +68,14 @@ kotlin {
             implementation(projects.shared)
             api(libs.datastore.preferences)
             implementation(libs.koin.composeVM)
+            implementation(libs.paging.compose)
+            implementation(libs.paging.common)
+            implementation(project.dependencies.platform(libs.firebase.bom.ktx))
+            implementation(libs.firebase.firestore)
             api(libs.datastore)
             api(libs.koin.core)
             api(libs.moko.geo)
+            api(libs.calf)
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.drawin)

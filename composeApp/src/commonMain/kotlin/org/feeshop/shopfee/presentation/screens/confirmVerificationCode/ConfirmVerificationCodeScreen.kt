@@ -13,14 +13,18 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import org.feeshop.shopfee.presentation.composable.OtpTextField
 import org.feeshop.shopfee.presentation.composable.ResendText
 import org.feeshop.shopfee.presentation.composable.SpAppBar
 import org.feeshop.shopfee.presentation.composable.SpButton
+import org.feeshop.shopfee.presentation.navigation.Screens
 import org.feeshop.shopfee.resources.Resources
 
 @Composable
-fun ConfirmVerificationCodeScreen(modifier: Modifier = Modifier) {
+fun ConfirmVerificationCodeScreen(
+    navController: NavController
+) {
     val otpInputs = List(5) { remember { mutableStateOf("") } }
 
     Column(
@@ -66,9 +70,12 @@ fun ConfirmVerificationCodeScreen(modifier: Modifier = Modifier) {
             textButtons = "Confirm",
             modifier = Modifier.padding(top = 56.dp).padding(16.dp),
             onClick = {
-                val otp = otpInputs.joinToString("") { it.value }
-                println("Entered OTP: $otp")
+                navController.navigate(Screens.Home.route)
+               /* val otp = otpInputs.joinToString("") { it.value }
+                println("Entered OTP: $otp")*/
             },
+            enable = true
+
         )
     }
 

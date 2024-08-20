@@ -30,7 +30,6 @@ fun SpSimpleTextField(
     trailingPainter: Painter? = null,
     leadingPainter: Painter? = null,
     keyboardType: KeyboardType = KeyboardType.Text,
-    radius: Dp = 8.dp,
     errorMessage: String = "",
     isError: Boolean = errorMessage.isNotEmpty(),
     onTrailingIconClick: () -> Unit = {},
