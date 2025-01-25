@@ -3,6 +3,7 @@ agp = "8.2.2"
 android-compileSdk = "34"
 android-minSdk = "24"
 android-targetSdk = "34"
+constraintlayoutCompose = "1.0.1"
 coreSplashscreenVersion = "1.0.1"
 androidx-activityCompose = "1.9.1"
 firebaseBom = "33.1.2"
@@ -17,7 +18,7 @@ androidx-lifecycle = "2.8.0"
 androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
 compose-plugin = "1.6.11"
-calf = "0.2.0"
+calf = "0.5.5"
 coil = "3.0.0-alpha08"
 datastore = "1.1.1"
 image-loader = "1.2.8"
@@ -42,13 +43,17 @@ serialization_version = "1.6.3"
 material3Android = "1.2.1"
 firebase-massage = "23.3.1"
 firebase-common = "20.4.2"
+firebaseAuth = "1.11.1"
+firebase-crashlytics-plugin = "2.9.9"
 google-services-version = "4.4.2"
 google-gson-version = "2.10.1"
+uiAndroid = "1.6.8"
 
 
 
 [libraries]
 
+androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
 androidx-core-splashscreen-v101 = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreenVersion" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
 androidx-test-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-junit" }
@@ -73,11 +78,15 @@ compose-image-loader = { module = "io.github.qdsfdhvh:image-loader", version.ref
 coil_compose_core = { module = "io.coil-kt.coil3:coil-compose-core", version.ref = "coil" }
 datastore = { module = "androidx.datastore:datastore", version.ref = "datastore" }
 datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+
 firebase-firestore = { module = "dev.gitlive:firebase-firestore", version.ref = "firebaseFirestore" }
 firebase-messaging-ktx = { group = "com.google.firebase", name = "firebase-messaging-ktx", version = "23.3.1" }
 firebase-common-ktx = { group = "com.google.firebase", name = "firebase-common-ktx", version = "20.4.2" }
 firebase-bom-ktx = { group = "com.google.firebase", name = "firebase-bom", version = "32.4.1" }
 google-code-gson = { module = "com.google.code.gson:gson", version.ref = "google-gson-version" }
+firebase-crashlyticsKtx = { module = "com.google.firebase:firebase-crashlytics-ktx" }
+firebase-auth = { module = "dev.gitlive:firebase-auth",version.ref = "firebaseAuth"}
+
 
 kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -122,6 +131,7 @@ paging-common= { module = "app.cash.paging:paging-common", version.ref = "paging
 
 realm-library-base = { module = "io.realm.kotlin:library-base", version.ref = "realm-version" }
 androidx-material3-android = { group = "androidx.compose.material3", name = "material3-android", version.ref = "material3Android" }
+androidx-ui-android = { group = "androidx.compose.ui", name = "ui-android", version.ref = "uiAndroid" }
 
 [bundles]
 ktor-common = ["ktor-client-core", "ktor-client-json", "ktor-client-logging", "ktor-client-serialization", "ktor-client-content-negotiation", "ktor-serialization-kotlinx-json"]
@@ -139,3 +149,4 @@ kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref =
 kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinx-serialization-version" }
 realm = { id = "io.realm.kotlin", version.ref = "realm-version" }
 google-services = { id = "com.google.gms.google-services",  version.ref = "google-services-version" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebase-crashlytics-plugin"}

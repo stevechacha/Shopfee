@@ -72,6 +72,8 @@ kotlin {
             implementation(libs.paging.common)
             implementation(project.dependencies.platform(libs.firebase.bom.ktx))
             implementation(libs.firebase.firestore)
+            implementation(libs.firebase.auth)
+            implementation(libs.androidx.constraintlayout)
             api(libs.datastore)
             api(libs.koin.core)
             api(libs.moko.geo)
@@ -126,5 +128,7 @@ dependencies {
     implementation(libs.moko.biometry)
     implementation(libs.moko.biometry.compose)
     implementation(libs.androidx.material3.android)
+    implementation(libs.androidx.ui.android)
+    implementation(libs.androidx.constraintlayout)
 }
 
